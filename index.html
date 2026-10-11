@@ -450,8 +450,10 @@
         <a href="#top" class="nav-logo">YE CHEN</a>
         <ul class="nav-links">
             <li><a href="#top">Home</a></li>
-            <li><a href="#work">Projects</a></li>
-            <li><a href="#about">Archive</a></li>
+            <li><a href="#work" onclick="showProject('work')">Selected</a></li>
+            <li><a href="#" onclick="showProject('sacred'); return false;">Sacred Spaces</a></li>
+            <li><a href="#" onclick="showProject('life'); return false;">Life in New York</a></li>
+            <li><a href="#" onclick="showProject('architecture'); return false;">Arch &amp; Light</a></li>
             <li><a href="#contact">About</a></li>
         </ul>
     </nav>
@@ -521,6 +523,80 @@
             </div>
         </div>
 
+
+    <!-- ===== Project: Sacred Spaces ===== -->
+    <section id="sacred" class="project-section" style="display:none">
+        <a href="#work" class="back-link">&larr; Back to Selected Work</a>
+        <p class="section-label">Project 01</p>
+        <h2 class="section-title">Sacred Spaces</h2>
+        <p class="project-desc">Quiet observations of church architecture, liturgy, and light — the places where faith gathers in daily life across New York City.</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><img loading="lazy" src="assets/p10.jpg" alt="Catholic liturgy at a New York parish"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p30.jpg" alt="Sacred icon and musician inside church"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p74.jpg" alt="Light and shadow falling across church interior"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p83.jpg" alt="Stained glass window in warm afternoon light"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p97.jpg" alt="Quiet corner of a New York church"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p3.jpg" alt="Church exterior stone facade"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p7.jpg" alt="Church entrance detail"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p19.jpg" alt="Nave perspective looking down church aisle"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p27.jpg" alt="Church pipe organ detail"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p47.jpg" alt="Side chapel altar in soft light"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p64.jpg" alt="Monument detail outside a historic church"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p96.jpg" alt="Modern church interior geometric light"></div>
+        </div>
+    </section>
+
+    <!-- ===== Project: Life in New York ===== -->
+    <section id="life" class="project-section" style="display:none">
+        <a href="#work" class="back-link">&larr; Back to Selected Work</a>
+        <p class="section-label">Project 02</p>
+        <h2 class="section-title">Life in New York</h2>
+        <p class="project-desc">Street moments, subway commutes, workers and passersby — the unscripted everyday rhythm of the city.</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><img loading="lazy" src="assets/p23.jpg" alt="Visitor inside a New York museum"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p34.jpg" alt="Street worker pausing for a moment"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p46.jpg" alt="Riders on the subway escalator"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p53.jpg" alt="Window washer suspended above the street"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p54.jpg" alt="Performer on a small stage"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p56.jpg" alt="Aerial view of yellow taxis on Manhattan street"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p76.jpg" alt="Pedestrians crossing in afternoon light"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p78.jpg" alt="Cars and people on a downtown block"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p79.jpg" alt="Two friends walking home"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p80.jpg" alt="Construction on a city corner"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p82.jpg" alt="Person walking past brick architecture"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p88.jpg" alt="Crowd inside the Apple Store"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p93.jpg" alt="Street corner in soft fall light"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p99.jpg" alt="Quiet moment on a residential block"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p106.jpg" alt="Late afternoon on a busy avenue"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p110.jpg" alt="Evening rush hour on the sidewalk"></div>
+        </div>
+    </section>
+
+    <!-- ===== Project: Architecture & Light ===== -->
+    <section id="architecture" class="project-section" style="display:none">
+        <a href="#work" class="back-link">&larr; Back to Selected Work</a>
+        <p class="section-label">Project 03</p>
+        <h2 class="section-title">Architecture &amp; Light</h2>
+        <p class="project-desc">Geometric forms, building facades, and the way daylight moves across concrete, stone and water.</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><img loading="lazy" src="assets/p77.jpg" alt="Light and form on New York skyline"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p44.jpg" alt="Circular building geometric detail"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p84.jpg" alt="Coastal pier under wide dramatic sky"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p60.jpg" alt="Sunset light over the water"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p8.jpg" alt="Steel and glass building facade"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p15.jpg" alt="Brick building fire escape pattern"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p17.jpg" alt="Tower rising against clear sky"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p24.jpg" alt="Corrugated metal facade texture"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p38.jpg" alt="Stone steps and concrete geometry"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p52.jpg" alt="One Vanderbilt tower against blue sky"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p55.jpg" alt="Manhattan skyline glowing at dusk"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p72.jpg" alt="East River skyline view"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p89.jpg" alt="Autumn light through city trees"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p92.jpg" alt="Wide urban view from high above"></div>
+            <div class="portfolio-item"><img loading="lazy" src="assets/p109.jpg" alt="Modern building glass and steel"></div>
+        </div>
+    </section>
+
     </section>
 
     <!-- ===== About / Contact ===== -->
@@ -584,6 +660,16 @@
             });
         });
 
+        // Project view switching
+        function showProject(id) {
+            document.getElementById('work').style.display = 'none';
+            document.querySelector('.hero').style.display = 'none';
+            document.querySelectorAll('.project-section').forEach(s => s.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+        window.showProject = showProject;
+
         // Lightbox for image enlargement
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
@@ -643,6 +729,23 @@
         }
         .portfolio-item {
             cursor: zoom-in;
+        }
+        .project-desc {
+            max-width: 600px;
+            margin: 1rem auto 3rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+        .back-link:hover {
+            opacity: 0.7;
         }
     </style>
 
