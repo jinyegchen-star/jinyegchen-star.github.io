@@ -450,16 +450,18 @@
         <a href="#top" class="nav-logo">YE CHEN</a>
         <ul class="nav-links">
             <li><a href="#top">Home</a></li>
-            <li><a href="#work" onclick="showProject('work')">Selected</a></li>
-            <li><a href="#" onclick="showProject('sacred'); return false;">Sacred Spaces</a></li>
-            <li><a href="#" onclick="showProject('life'); return false;">Life in New York</a></li>
-            <li><a href="#" onclick="showProject('architecture'); return false;">Arch &amp; Light</a></li>
-            <li><a href="#contact">About</a></li>
+            <li><a href="#top" onclick="showPage('home'); return false;">Home</a></li>
+            <li><a href="#" onclick="showPage('work'); return false;">Selected</a></li>
+            <li><a href="#" onclick="showPage('sacred'); return false;">Sacred Spaces</a></li>
+            <li><a href="#" onclick="showPage('life'); return false;">Life in NY</a></li>
+            <li><a href="#" onclick="showPage('architecture'); return false;">Arch &amp; Light</a></li>
+            <li><a href="#" onclick="showPage('archive'); return false;">Archive</a></li>
+            <li><a href="#" onclick="showPage('about-section'); return false;">About</a></li>
         </ul>
     </nav>
 
     <!-- ===== Hero ===== -->
-    <header class="hero" id="top">
+    <header class="hero" id="hero">
         <div class="hero-bg" style="background-image: url('assets/p77.jpg')" role="img" aria-label="Ye Chen photography — selected portfolio hero image"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -483,7 +485,7 @@
         <p class="portfolio-hint">Select a category to view work</p>
 
 
-        <div class="portfolio-grid">
+        <div class="portfolio-grid" id="selected-work-grid">
             <!-- 精选12幅作品 -->
             <div class="portfolio-item" data-category="architecture">
                 <img src="assets/p77.jpg" alt="Ye Chen photography — selected portfolio work, New York light and architecture">
@@ -526,7 +528,7 @@
 
     <!-- ===== Project: Sacred Spaces ===== -->
     <section id="sacred" class="project-section" style="display:none">
-        <a href="#work" class="back-link">&larr; Back to Selected Work</a>
+        <a href="#" onclick="showPage('work'); return false;" class="back-link">&larr; Back to Selected Work</a>
         <p class="section-label">Project 01</p>
         <h2 class="section-title">Sacred Spaces</h2>
         <p class="project-desc">Quiet observations of church architecture, liturgy, and light — the places where faith gathers in daily life across New York City.</p>
@@ -548,7 +550,7 @@
 
     <!-- ===== Project: Life in New York ===== -->
     <section id="life" class="project-section" style="display:none">
-        <a href="#work" class="back-link">&larr; Back to Selected Work</a>
+        <a href="#" onclick="showPage('work'); return false;" class="back-link">&larr; Back to Selected Work</a>
         <p class="section-label">Project 02</p>
         <h2 class="section-title">Life in New York</h2>
         <p class="project-desc">Street moments, subway commutes, workers and passersby — the unscripted everyday rhythm of the city.</p>
@@ -574,7 +576,7 @@
 
     <!-- ===== Project: Architecture & Light ===== -->
     <section id="architecture" class="project-section" style="display:none">
-        <a href="#work" class="back-link">&larr; Back to Selected Work</a>
+        <a href="#" onclick="showPage('work'); return false;" class="back-link">&larr; Back to Selected Work</a>
         <p class="section-label">Project 03</p>
         <h2 class="section-title">Architecture &amp; Light</h2>
         <p class="project-desc">Geometric forms, building facades, and the way daylight moves across concrete, stone and water.</p>
@@ -599,8 +601,27 @@
 
     </section>
 
+
+    <!-- ===== Archive ===== -->
+    <section id="archive" class="project-section" style="display:none">
+        <a href="#work" class="back-link" onclick="showPage('home'); return false;">&larr; Back to Home</a>
+        <p class="section-label">Archive</p>
+        <h2 class="section-title">Photography Archive</h2>
+        <p class="project-desc">Selected additional work — uncurated moments, test frames, and quiet records not featured in the main projects.</p>
+        <div class="portfolio-filter">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="architecture">Architecture</button>
+            <button class="filter-btn" data-filter="street">Street</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+        <div class="portfolio-grid" id="archive-grid">
+            <div class="portfolio-item" data-category="other"><img loading="lazy" src="assets/p9.jpg" alt="Ye Chen photography archive p9"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p11.jpg" alt="Ye Chen photography archive p11"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p12.jpg" alt="Ye Chen photography archive p12"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p13.jpg" alt="Ye Chen photography archive p13"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p14.jpg" alt="Ye Chen photography archive p14"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p16.jpg" alt="Ye Chen photography archive p16"></div><div class="portfolio-item" data-category="other"><img loading="lazy" src="assets/p18.jpg" alt="Ye Chen photography archive p18"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p20.jpg" alt="Ye Chen photography archive p20"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p21.jpg" alt="Ye Chen photography archive p21"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p22.jpg" alt="Ye Chen photography archive p22"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p25.jpg" alt="Ye Chen photography archive p25"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p26.jpg" alt="Ye Chen photography archive p26"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p28.jpg" alt="Ye Chen photography archive p28"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p29.jpg" alt="Ye Chen photography archive p29"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p31.jpg" alt="Ye Chen photography archive p31"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p32.jpg" alt="Ye Chen photography archive p32"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p33.jpg" alt="Ye Chen photography archive p33"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p35.jpg" alt="Ye Chen photography archive p35"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p36.jpg" alt="Ye Chen photography archive p36"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p37.jpg" alt="Ye Chen photography archive p37"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p39.jpg" alt="Ye Chen photography archive p39"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p40.jpg" alt="Ye Chen photography archive p40"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p41.jpg" alt="Ye Chen photography archive p41"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p42.jpg" alt="Ye Chen photography archive p42"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p43.jpg" alt="Ye Chen photography archive p43"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p45.jpg" alt="Ye Chen photography archive p45"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p47.jpg" alt="Ye Chen photography archive p47"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p48.jpg" alt="Ye Chen photography archive p48"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p49.jpg" alt="Ye Chen photography archive p49"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p50.jpg" alt="Ye Chen photography archive p50"></div><div class="portfolio-item" data-category="street"><img loading="lazy" src="assets/p51.jpg" alt="Ye Chen photography archive p51"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p57.jpg" alt="Ye Chen photography archive p57"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p58.jpg" alt="Ye Chen photography archive p58"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p59.jpg" alt="Ye Chen photography archive p59"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p61.jpg" alt="Ye Chen photography archive p61"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p62.jpg" alt="Ye Chen photography archive p62"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p63.jpg" alt="Ye Chen photography archive p63"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p64.jpg" alt="Ye Chen photography archive p64"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p65.jpg" alt="Ye Chen photography archive p65"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p66.jpg" alt="Ye Chen photography archive p66"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p67.jpg" alt="Ye Chen photography archive p67"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p68.jpg" alt="Ye Chen photography archive p68"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p69.jpg" alt="Ye Chen photography archive p69"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p70.jpg" alt="Ye Chen photography archive p70"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p71.jpg" alt="Ye Chen photography archive p71"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p73.jpg" alt="Ye Chen photography archive p73"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p75.jpg" alt="Ye Chen photography archive p75"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p81.jpg" alt="Ye Chen photography archive p81"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p85.jpg" alt="Ye Chen photography archive p85"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p86.jpg" alt="Ye Chen photography archive p86"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p87.jpg" alt="Ye Chen photography archive p87"></div><div class="portfolio-item" data-category="street"><img loading="lazy" src="assets/p90.jpg" alt="Ye Chen photography archive p90"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p91.jpg" alt="Ye Chen photography archive p91"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p94.jpg" alt="Ye Chen photography archive p94"></div><div class="portfolio-item" data-category="street"><img loading="lazy" src="assets/p95.jpg" alt="Ye Chen photography archive p95"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p98.jpg" alt="Ye Chen photography archive p98"></div><div class="portfolio-item" data-category="street"><img loading="lazy" src="assets/p100.jpg" alt="Ye Chen photography archive p100"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p101.jpg" alt="Ye Chen photography archive p101"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p102.jpg" alt="Ye Chen photography archive p102"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p103.jpg" alt="Ye Chen photography archive p103"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p104.jpg" alt="Ye Chen photography archive p104"></div><div class="portfolio-item" data-category="other"><img loading="lazy" src="assets/p105.jpg" alt="Ye Chen photography archive p105"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p107.jpg" alt="Ye Chen photography archive p107"></div><div class="portfolio-item" data-category="street"><img loading="lazy" src="assets/p108.jpg" alt="Ye Chen photography archive p108"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p111.jpg" alt="Ye Chen photography archive p111"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p112.jpg" alt="Ye Chen photography archive p112"></div><div class="portfolio-item" data-category="street"><img loading="lazy" src="assets/p113.jpg" alt="Ye Chen photography archive p113"></div><div class="portfolio-item" data-category="nature"><img loading="lazy" src="assets/p114.jpg" alt="Ye Chen photography archive p114"></div><div class="portfolio-item" data-category="architecture"><img loading="lazy" src="assets/p115.jpg" alt="Ye Chen photography archive p115"></div>
+        </div>
+    </section>
+
     <!-- ===== About / Contact ===== -->
-    <section id="contact" class="contact">
+    <section id="about-section" class="contact">
         <p class="section-label">About</p>
         <h2>Ye Chen</h2>
         <p>Ye Chen is a photographer based in New York City. His work focuses on urban spaces, faith, and everyday life. Through architecture, street scenes, and community events, he explores the relationship between light, people, and place. His photographs aim to preserve quiet moments that might otherwise go unnoticed.</p>
@@ -660,15 +681,24 @@
             });
         });
 
-        // Project view switching
-        function showProject(id) {
-            document.getElementById('work').style.display = 'none';
-            document.querySelector('.hero').style.display = 'none';
-            document.querySelectorAll('.project-section').forEach(s => s.style.display = 'none');
-            document.getElementById(id).style.display = 'block';
+        // Page view switching
+        const allSections = ['hero', 'work', 'sacred', 'life', 'architecture', 'archive', 'about-section'];
+        function showPage(pageId) {
+            allSections.forEach(s => {
+                const el = document.getElementById(s);
+                if (el) el.style.display = 'none';
+            });
+            if (pageId === 'home') {
+                document.getElementById('hero').style.display = 'flex';
+                document.getElementById('work').style.display = 'block';
+                document.getElementById('about-section').style.display = 'block';
+            } else {
+                const el = document.getElementById(pageId);
+                if (el) el.style.display = 'block';
+            }
             window.scrollTo(0, 0);
         }
-        window.showProject = showProject;
+        window.showPage = showPage;
 
         // Lightbox for image enlargement
         const lightbox = document.createElement('div');
@@ -678,12 +708,12 @@
         const lightboxImg = lightbox.querySelector('img');
         const closeLightbox = lightbox.querySelector('.close-lightbox');
 
-        document.querySelectorAll('.portfolio-item img').forEach(img => {
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.src;
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('.portfolio-item img')) {
+                lightboxImg.src = e.target.src;
                 lightbox.classList.add('active');
                 document.body.style.overflow = 'hidden';
-            });
+            }
         });
 
         function hideLightbox() {
@@ -696,6 +726,19 @@
         });
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && lightbox.classList.contains('active')) hideLightbox();
+        });
+
+        // Archive filter
+        document.querySelectorAll('#archive .filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('#archive .filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.querySelectorAll('#archive-grid .portfolio-item').forEach(item => {
+                    const cat = item.dataset.category || '';
+                    item.style.display = (filter === 'all' || cat === filter) ? 'block' : 'none';
+                });
+            });
         });
     </script>
 
