@@ -350,6 +350,31 @@
             opacity: 0.7;
         }
 
+        .social-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .social-btn {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--text-faint);
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
         /* ===== Footer ===== */
         footer {
             padding: 2rem;
@@ -801,11 +826,17 @@
         </div>
     </section>
 
-    <!-- ===== About Footer ===== -->
+    <!-- ===== About / Contact ===== -->
     <section id="contact" class="contact">
-        <p class="section-label">About</p>
+        <p class="section-label">Connect</p>
         <h2>Ye Chen</h2>
         <p>Chinese photographer based in New York City, capturing the quiet moments of the city and the natural world.</p>
+        <div class="social-links">
+            <a href="https://instagram.com/yechen.photo" target="_blank" rel="noopener" class="social-btn">Instagram</a>
+            <a href="mailto:hello@yechen.photo" class="social-btn">Email</a>
+            <a href="https://calendly.com/yechen/zoom" target="_blank" rel="noopener" class="social-btn">Zoom Booking</a>
+            <a href="https://linkedin.com/in/yechen" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
+        </div>
     </section>
 
     <!-- ===== Footer ===== -->
