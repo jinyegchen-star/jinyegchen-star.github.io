@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ye Chen Photography — Capturing Light & Moments</title>
+    <meta name="description" content="Ye Chen is a photographer based in New York. Photography portfolio featuring street, architecture, and landscape work by Ye Chen.">
+    <meta name="author" content="Ye Chen">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yechen.photo/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yechen.photo/">
+    <meta property="og:title" content="Ye Chen Photography">
+    <meta property="og:description" content="Photography portfolio by Ye Chen — street, architecture, and landscape.">
+    <meta property="og:image" content="assets/hero-street.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yechen.photo/">
+    <meta property="twitter:title" content="Ye Chen Photography">
+    <meta property="twitter:description" content="Photography portfolio by Ye Chen — street, architecture, and landscape.">
+    <meta property="twitter:image" content="assets/hero-street.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23f5f5f5'>Y</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Work+Sans:wght@300;400;500&display=swap">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ye Chen",
+        "jobTitle": "Photographer",
+        "url": "https://yechen.photo",
+        "image": "https://yechen.photo/assets/hero-street.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New York",
+            "addressCountry": "United States"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <style>
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --bg-soft: #111111;
+            --text: #f5f5f5;
+            --text-dim: #888888;
+            --text-faint: #555555;
+            --accent: #c9a96e;
+            --max-width: 1200px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        /* ===== Typography ===== */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        /* ===== Navigation ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.9), transparent);
+        }
+
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            letter-spacing: 0.15em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('assets/hero-street.jpg') center/cover no-repeat;
+            opacity: 0.5;
+            filter: saturate(0.8);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.6) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero-name {
+            font-size: clamp(3rem, 10vw, 7rem);
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero-tagline {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            color: var(--text-dim);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-faint);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* ===== Section Base ===== */
+        section {
+            padding: 6rem 2rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 3rem;
+        }
+
+        /* ===== Portfolio Grid ===== */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-soft);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            display: block;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .portfolio-item.tall {
+            grid-row: span 2;
+        }
+
+        .portfolio-item.wide {
+            grid-column: span 2;
+        }
+
+        .portfolio-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-caption {
+            opacity: 1;
+        }
+
+        .portfolio-caption h3 {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+
+        .portfolio-caption p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        /* ===== About ===== */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-portrait {
+            aspect-ratio: 3/4;
+            overflow: hidden;
+        }
+
+        .about-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(0.3);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .about-text p:first-child {
+            color: var(--text);
+        }
+
+        /* ===== Contact ===== */
+        .contact {
+            text-align: center;
+            padding: 8rem 2rem;
+        }
+
+        .contact h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact p {
+            color: var(--text-dim);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        .contact-email {
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 0.25rem;
+            transition: opacity 0.3s;
+        }
+
+        .contact-email:hover {
+            opacity: 0.7;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--bg-soft);
+            color: var(--text-faint);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.25rem;
+            }
+
+            .nav-links a {
+                font-size: 0.7rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .portfolio-item.tall,
+            .portfolio-item.wide {
+                grid-row: auto;
+                grid-column: auto;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-portrait {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== Navigation ===== -->
+    <nav>
+        <a href="#top" class="nav-logo">YE CHEN</a>
+        <ul class="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== Hero ===== -->
+    <header class="hero" id="top">
+        <div class="hero-bg" role="img" aria-label="Ye Chen photography — rainy city street scene"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-name">Ye Chen</h1>
+            <p class="hero-tagline">Photography · New York</p>
+        </div>
+        <div class="hero-scroll">Scroll</div>
+    </header>
+
+    <!-- ===== Portfolio ===== -->
+    <section id="work">
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">Photography Portfolio</h2>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item tall">
+                <img src="assets/architecture-bw.jpg" alt="Ye Chen photography — black and white minimalist architecture, New York city skyscrapers looking up">
+                <div class="portfolio-caption">
+                    <h3>Concrete & Light</h3>
+                    <p>Architecture series · 2025</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/fog-mountain.jpg" alt="Ye Chen photography — misty mountain landscape with pine trees, fog rolling through valley">
+                <div class="portfolio-caption">
+                    <h3>Valley Fog</h3>
+                    <p>Landscape · Catskills, 2025</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/minimal-concrete.jpg" alt="Ye Chen photography — minimalist concrete building facade with strong geometric shadows">
+                <div class="portfolio-caption">
+                    <h3>Geometry of Silence</h3>
+                    <p>Architecture · 2024</p>
+                </div>
+            </div>
+            <div class="portfolio-item wide">
+                <img src="assets/rainy-cobble.jpg" alt="Ye Chen photography — wet cobblestone street at night with warm streetlights reflecting on rain-soaked pavement">
+                <div class="portfolio-caption">
+                    <h3>After Rain</h3>
+                    <p>Street · Brooklyn, 2025</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/morning-mist.jpg" alt="Ye Chen photography — morning mist rolling over green forested hills at sunrise">
+                <div class="portfolio-caption">
+                    <h3>First Light</h3>
+                    <p>Landscape · Hudson Valley, 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Ye Chen</h2>
+
+        <div class="about-content">
+            <div class="about-portrait">
+                <img src="assets/hero-street.jpg" alt="Ye Chen — photographer portrait, city street background">
+            </div>
+            <div class="about-text">
+                <p>Ye Chen is a photographer based in New York City, drawn to the quiet moments between movement and stillness — the way light falls on wet pavement, the geometry of concrete against sky, fog rolling through a mountain valley at dawn.</p>
+                <p>Working primarily in street, architecture, and landscape photography, Ye Chen's work explores the intersection of human spaces and natural environments. Each image is an attempt to hold a single, fleeting moment — one that would otherwise disappear unnoticed.</p>
+                <p>Currently based in New York, Ye Chen shoots across the Northeast and beyond. Available for commissions, collaborations, and print inquiries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="contact">
+        <p class="section-label">Get in Touch</p>
+        <h2>Let's work together</h2>
+        <p>For print purchases, commissions, or collaboration inquiries, reach out anytime.</p>
+        <a href="mailto:hello@yechen.photo" class="contact-email">hello@yechen.photo</a>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p>&copy; 2026 Ye Chen Photography · All rights reserved</p>
+    </footer>
+</body>
+</html>
