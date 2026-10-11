@@ -469,9 +469,9 @@
     <!-- ===== Portfolio ===== -->
     <section id="work">
         <p class="section-label">Selected Work</p>
-        <h2 class="section-title">Photography Portfolio</h2>
-        <div class="portfolio-filter">
-            <button class="filter-btn" data-filter="all">All</button>
+        <h2 class="section-title">Selected Work</h2>
+        <div class="portfolio-filter" id="selected-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="architecture">Architecture</button>
             <button class="filter-btn" data-filter="sacred">Sacred</button>
             <button class="filter-btn" data-filter="street">Street</button>
@@ -602,8 +602,8 @@
         <p class="section-label">Archive</p>
         <h2 class="section-title">Photography Archive</h2>
         <p class="project-desc">Selected additional work — uncurated moments, test frames, and quiet records not featured in the main projects.</p>
-        <div class="portfolio-filter">
-            <button class="filter-btn" data-filter="all">All</button>
+        <div class="portfolio-filter" id="archive-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="architecture">Architecture</button>
             <button class="filter-btn" data-filter="street">Street</button>
             <button class="filter-btn" data-filter="nature">Nature</button>
@@ -655,18 +655,32 @@
     </footer>
 
     <script>
-        document.querySelectorAll('.filter-btn').forEach(btn => {
+        // 首页精选区筛选（只作用于Selected Work里的12张图）
+        document.querySelectorAll('#selected-filters .filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                // 更新按钮状态
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('#selected-filters .filter-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-                
-                // 隐藏提示文字
-                document.querySelector('.portfolio-hint').style.display = 'none';
-                
                 const filter = btn.dataset.filter;
-                document.querySelectorAll('.portfolio-item').forEach(item => {
-                    if (filter === 'all' || item.dataset.category.includes(filter)) {
+                document.querySelectorAll('#selected-work-grid .portfolio-item').forEach(item => {
+                    const cat = item.dataset.category || '';
+                    if (filter === 'all' || cat.includes(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Archive区筛选（只作用于Archive里的照片，完全独立）
+        document.querySelectorAll('#archive-filters .filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#archive-filters .filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('#archive-grid .portfolio-item').forEach(item => {
+                    const cat = item.dataset.category || '';
+                    if (filter === 'all' || cat.includes(filter)) {
                         item.style.display = 'block';
                     } else {
                         item.style.display = 'none';
