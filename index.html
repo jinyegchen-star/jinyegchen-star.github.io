@@ -221,14 +221,15 @@
         /* ===== Portfolio Grid ===== */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
         }
 
         .portfolio-item {
             position: relative;
             overflow: hidden;
             background: var(--bg-soft);
+            aspect-ratio: 3/4;
         }
 
         .portfolio-item img {
@@ -243,38 +244,11 @@
             transform: scale(1.03);
         }
 
-        .portfolio-item.tall {
-            grid-row: span 2;
-        }
-
-        .portfolio-item.wide {
-            grid-column: span 2;
-        }
-
-        .portfolio-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1.5rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .portfolio-item:hover .portfolio-caption {
-            opacity: 1;
-        }
-
-        .portfolio-caption h3 {
-            font-size: 1.1rem;
-            color: var(--text);
-            margin-bottom: 0.25rem;
-        }
-
-        .portfolio-caption p {
-            font-size: 0.8rem;
-            color: var(--text-dim);
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
         }
 
         /* ===== About ===== */
@@ -418,40 +392,176 @@
         <h2 class="section-title">Photography Portfolio</h2>
 
         <div class="portfolio-grid">
-            <div class="portfolio-item tall">
-                <img src="assets/shot-building-pigeons.jpg" alt="Ye Chen photography — pigeons perched on a street lamp against a modern glass skyscraper, NYC theatre district">
-                <div class="portfolio-caption">
-                    <h3>Pigeons on the Lamp</h3>
-                    <p>Street · Midtown, 2025</p>
-                </div>
+            <div class="portfolio-item">
+                <img src="assets/p1.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
             </div>
             <div class="portfolio-item">
-                <img src="assets/shot-dog.jpg" alt="Ye Chen photography — a husky dog lying on the sidewalk, resting beside a metal bucket, New York street photography">
-                <div class="portfolio-caption">
-                    <h3>Waiting</h3>
-                    <p>Street · Manhattan, 2025</p>
-                </div>
+                <img src="assets/p2.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
             </div>
             <div class="portfolio-item">
-                <img src="assets/shot-brick-worker.jpg" alt="Ye Chen photography — a construction worker in bright green shirt and hard hat resting against a red brick building, dappled sunlight through trees">
-                <div class="portfolio-caption">
-                    <h3>Break Time</h3>
-                    <p>Street · Brooklyn, 2025</p>
-                </div>
-            </div>
-            <div class="portfolio-item wide">
-                <img src="assets/shot-homeless.jpg" alt="Ye Chen photography — a man sitting in a folding chair outside a blue tarp shelter on the sidewalk, urban documentary photography New York">
-                <div class="portfolio-caption">
-                    <h3>Side Home</h3>
-                    <p>Documentary · Lower East Side, 2025</p>
-                </div>
+                <img src="assets/p3.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
             </div>
             <div class="portfolio-item">
-                <img src="assets/shot-chalk-flowers.jpg" alt="Ye Chen photography — colorful chalk flowers drawn on the concrete sidewalk, street art from above">
-                <div class="portfolio-caption">
-                    <h3>Sidewalk Bloom</h3>
-                    <p>Street · Queens, 2025</p>
-                </div>
+                <img src="assets/p4.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p5.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p6.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p7.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p8.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p9.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p10.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p11.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p12.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p13.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p14.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p15.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p16.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p17.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p18.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p19.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p20.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p21.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p22.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p23.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p24.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p25.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p26.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p27.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p28.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p29.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p30.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p31.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p32.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p33.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p34.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p35.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p36.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p37.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p38.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p39.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p40.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p41.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p42.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p43.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p44.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p45.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p46.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p47.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p48.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p49.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p50.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p51.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p52.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p53.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p54.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p55.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p56.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/p57.jpg" alt="Ye Chen photography — New York street photography, city life moments captured in Manhattan">
             </div>
         </div>
     </section>
